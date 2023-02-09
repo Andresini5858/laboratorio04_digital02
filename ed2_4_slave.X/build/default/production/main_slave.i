@@ -2824,7 +2824,7 @@ void setup(void){
 
 void setupADC(void){
     ADCON0bits.ADCS1 = 0;
-    ADCON0bits.ADCS0 = 1;
+    ADCON0bits.ADCS0 = 0;
 
     ADCON1bits.VCFG1 = 0;
     ADCON1bits.VCFG0 = 0;

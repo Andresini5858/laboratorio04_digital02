@@ -30,7 +30,7 @@ cstackBANK0 BANK0 1 20 20 1 1 1
 intentry CODE 0 4 4 8 2 1
 bssCOMMON COMMON 1 77 77 2 1 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
+$C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -79,13 +79,13 @@ STRING 12E-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ed2_4_slave.X.production.o
-F cinit CODE >632:C:\Users\lemus\AppData\Local\Temp\xcAsb2g.s
-F cinit CODE >635:C:\Users\lemus\AppData\Local\Temp\xcAsb2g.s
-F cinit CODE >649:C:\Users\lemus\AppData\Local\Temp\xcAsb2g.s
-10 cinit CODE >650:C:\Users\lemus\AppData\Local\Temp\xcAsb2g.s
-11 cinit CODE >656:C:\Users\lemus\AppData\Local\Temp\xcAsb2g.s
-11 cinit CODE >658:C:\Users\lemus\AppData\Local\Temp\xcAsb2g.s
-12 cinit CODE >659:C:\Users\lemus\AppData\Local\Temp\xcAsb2g.s
+F cinit CODE >632:C:\Users\lemus\AppData\Local\Temp\xcAsc6o.s
+F cinit CODE >635:C:\Users\lemus\AppData\Local\Temp\xcAsc6o.s
+F cinit CODE >649:C:\Users\lemus\AppData\Local\Temp\xcAsc6o.s
+10 cinit CODE >650:C:\Users\lemus\AppData\Local\Temp\xcAsc6o.s
+11 cinit CODE >656:C:\Users\lemus\AppData\Local\Temp\xcAsc6o.s
+11 cinit CODE >658:C:\Users\lemus\AppData\Local\Temp\xcAsc6o.s
+12 cinit CODE >659:C:\Users\lemus\AppData\Local\Temp\xcAsc6o.s
 4 intentry CODE >48:C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\main_slave.c
 125 text10 CODE >112:C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\i2c.c
 125 text10 CODE >115:C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\i2c.c
@@ -198,20 +198,20 @@ __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
+___sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
 _main 184 0 CODE 0 maintext dist/default/production\ed2_4_slave.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
-start 18 0 CODE 0 init C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
+start 18 0 CODE 0 init C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 I2C_Init_Slave@add_slave 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_4_slave.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 _I2C_Error_Read$272 74 0 COMMON 1 cstackCOMMON dist/default/production\ed2_4_slave.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
@@ -225,8 +225,8 @@ I2C_Read_Slave@dato_i2c 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_4
 __Lmaintext 0 0 ABS 0 maintext -
 _I2C_Read_Mode 1D8 0 CODE 0 text8 dist/default/production\ed2_4_slave.X.production.o
 I2C_Write_Slave@dato_i2c 70 0 COMMON 1 cstackCOMMON dist/default/production\ed2_4_slave.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
-___stacklo 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
+___stackhi 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
+___stacklo 0 0 ABS 0 - C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\ed2_4_slave.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\ed2_4_slave.X.production.o
@@ -234,7 +234,7 @@ _SSPADD 93 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
 _I2C_Write_Mode$282 74 0 COMMON 1 cstackCOMMON dist/default/production\ed2_4_slave.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
+___int_sp 0 0 STACK 2 stack C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -283,7 +283,7 @@ __end_of_I2C_Read_Mode 202 0 CODE 0 text8 dist/default/production\ed2_4_slave.X.
 __end_of_isr BC 0 CODE 0 text4 dist/default/production\ed2_4_slave.X.production.o
 _I2C_Write_Slave 202 0 CODE 0 text5 dist/default/production\ed2_4_slave.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\lemus\AppData\Local\Temp\xcAsb2g.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\lemus\AppData\Local\Temp\xcAsc6o.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\ed2_4_slave.X.production.o
 __ptext10 24A 0 CODE 0 text10 dist/default/production\ed2_4_slave.X.production.o
 _I2C_Read_Slave 228 0 CODE 0 text7 dist/default/production\ed2_4_slave.X.production.o

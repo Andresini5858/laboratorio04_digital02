@@ -86,7 +86,7 @@ void setup(void){
 
 void setupADC(void){
     ADCON0bits.ADCS1 = 0; // Fosc/8        
-    ADCON0bits.ADCS0 = 1; //       
+    ADCON0bits.ADCS0 = 0; //       
     
     ADCON1bits.VCFG1 = 0; // Referencia VSS (0 Volts)
     ADCON1bits.VCFG0 = 0; // Referencia VDD (5 Volts)
