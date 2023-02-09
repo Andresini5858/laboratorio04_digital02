@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ed2_4_slave1.X
+PROJECTNAME=ed2_4_slave.X
 
 # Active Configuration
 DEFAULTCONF=default

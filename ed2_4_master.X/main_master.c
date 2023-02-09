@@ -1,8 +1,8 @@
 /*
  * File:   main_master.c
- * Author: Andres Lemus
+ * Author: Andres
  *
- * Created on February 8, 2023, 12:27 PM
+ * Created on February 9, 2023, 3:18 PM
  */
 
 // CONFIG1
@@ -25,25 +25,30 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "LCD.h" //librería LCD
+#include "i2c.h"
 
 #define _XTAL_FREQ 8000000 //Frecuencia 8MHz
-//MASTER MASTER MASTER
+
+unsigned char voltaje;
+char buffer[20];
 
 void setup(void);
-void setupI2C(void);
-void I2C_Start(void);
-void I2C_Stop(void);
-void I2C_Restart(void);
-void I2C_Ack(void);
-void I2C_Nack(void);
-short I2C_Write(unsigned char data);
-unsigned char I2C_Read(void);
 
 void main(void) {
     setup();
-    setupI2C();
+    Lcd_Init();
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("S1:");
     while(1){
-        
+        I2C_Start();
+        I2C_Write(0x51);
+        voltaje = I2C_Read();
+        Lcd_Set_Cursor(2,1);
+        sprintf(buffer, "%d", voltaje);
+        Lcd_Write_String(buffer);
+        I2C_Stop();
+        __delay_us(10);
     }
 }
 
@@ -51,65 +56,16 @@ void setup(void){
     ANSEL = 0;
     ANSELH = 0;
     
+    TRISB = 0;
+    TRISD = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTD = 0;
+    
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF0 = 1;
-    OSCCONbits.SCS = 1;
-}
-
-void setupI2C(void){
-    TRISCbits.TRISC4 = 1;
-    TRISCbits.TRISC3 = 1;
     
-    SSPSTAT = 0b10000000;
-    SSPCON = 0b00101000;
-    SSPCON2 = 0;
-    SSPADD = 19;
-}
-
-void I2C_Start(void){
-    SSPCON2bits.SEN = 1;
-    while (PIR1bits.SSPIF == 0);
-    PIR1bits.SSPIF = 0;
-}
-
-void I2C_Stop(void){
-    SSPCON2bits.PEN = 1;
-    while (PIR1bits.SSPIF == 0);
-    PIR1bits.SSPIF = 0;
-}
-
-void I2C_Restart(void){
-    SSPCON2bits.RSEN = 1;
-    while (PIR1bits.SSPIF == 0);
-    PIR1bits.SSPIF = 0;
-}
-
-void I2C_Ack(void){
-    SSPCON2bits.ACKDT = 0;
-    SSPCON2bits.ACKEN = 1;
-    while (PIR1bits.SSPIF == 0);
-    PIR1bits.SSPIF = 0;
-}
-
-void I2C_Nack(void){
-    SSPCON2bits.ACKDT = 1;
-    SSPCON2bits.ACKEN = 1;
-    while (PIR1bits.SSPIF == 0);
-    PIR1bits.SSPIF = 0;
-}
-
-short I2C_Write(unsigned char data){
-    SSPBUF = data;
-    while (PIR1bits.SSPIF == 0);
-    PIR1bits.SSPIF = 0;
-    short ready = SSPCON2bits.ACKSTAT;
-    return ready;
-}
-
-unsigned char I2C_Read(void){
-    SSPCON2bits.RCEN = 1;
-    while (PIR1bits.SSPIF == 0);
-    PIR1bits.SSPIF = 0;
-    return SSPBUF;
+    OSCCONbits.SCS = 1;
+    I2C_Init_Master(I2C_100KHZ);
 }

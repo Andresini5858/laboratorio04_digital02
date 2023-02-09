@@ -1,0 +1,288 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"10 E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"83 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\i2c.c
+[v _I2C_Init_Slave I2C_Init_Slave `(v  1 e 1 0 ]
+"97
+[v _I2C_Error_Read I2C_Error_Read `(s  1 e 2 0 ]
+"103
+[v _I2C_Write_Mode I2C_Write_Mode `(s  1 e 2 0 ]
+"107
+[v _I2C_Read_Mode I2C_Read_Mode `(s  1 e 2 0 ]
+"112
+[v _I2C_Error_Data I2C_Error_Data `(v  1 e 1 0 ]
+"123
+[v _I2C_Read_Slave I2C_Read_Slave `(uc  1 e 1 0 ]
+"135
+[v _I2C_Write_Slave I2C_Write_Slave `(v  1 e 1 0 ]
+"38 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\main_slave.c
+[v _main main `(v  1 e 1 0 ]
+"48
+[v _isr isr `II(v  1 e 1 0 ]
+"70
+[v _setup setup `(v  1 e 1 0 ]
+"87
+[v _setupADC setupADC `(v  1 e 1 0 ]
+"291 E:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S47 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"483
+[s S56 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S61 . 1 `S47 1 . 1 0 `S56 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES61  1 e 1 @11 ]
+[s S79 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"554
+[u S87 . 1 `S79 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES87  1 e 1 @12 ]
+"844
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"851
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S117 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"871
+[s S123 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S128 . 1 `S117 1 . 1 0 `S123 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES128  1 e 1 @20 ]
+"1239
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S305 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1277
+[s S310 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S319 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S322 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S325 . 1 `S305 1 . 1 0 `S310 1 . 1 0 `S319 1 . 1 0 `S322 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES325  1 e 1 @31 ]
+[s S22 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1558
+[u S31 . 1 `S22 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES31  1 e 1 @135 ]
+[s S98 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1719
+[u S106 . 1 `S98 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES106  1 e 1 @140 ]
+[s S403 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1883
+[s S409 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S414 . 1 `S403 1 . 1 0 `S409 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES414  1 e 1 @143 ]
+"1980
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"2049
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"2178
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S143 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2232
+[s S152 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S157 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S163 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S168 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S173 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S178 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S183 . 1 `S143 1 . 1 0 `S152 1 . 1 0 `S157 1 . 1 0 `S163 1 . 1 0 `S168 1 . 1 0 `S173 1 . 1 0 `S178 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES183  1 e 1 @148 ]
+[s S430 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2992
+[u S436 . 1 `S430 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES436  1 e 1 @159 ]
+[s S369 . 1 `uc 1 ANS0 1 0 :1:0 
+`uc 1 ANS1 1 0 :1:1 
+`uc 1 ANS2 1 0 :1:2 
+`uc 1 ANS3 1 0 :1:3 
+`uc 1 ANS4 1 0 :1:4 
+`uc 1 ANS5 1 0 :1:5 
+`uc 1 ANS6 1 0 :1:6 
+`uc 1 ANS7 1 0 :1:7 
+]
+"3405
+[u S378 . 1 `S369 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES378  1 e 1 @392 ]
+"3450
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3646
+[v _BF BF `VEb  1 e 0 @1184 ]
+"32 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\main_slave.c
+[v _voltaje voltaje `uc  1 e 1 0 ]
+"33
+[v _recibido recibido `uc  1 e 1 0 ]
+"38
+[v _main main `(v  1 e 1 0 ]
+{
+"46
+} 0
+"87
+[v _setupADC setupADC `(v  1 e 1 0 ]
+{
+"103
+} 0
+"70
+[v _setup setup `(v  1 e 1 0 ]
+{
+"85
+} 0
+"83 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\i2c.c
+[v _I2C_Init_Slave I2C_Init_Slave `(v  1 e 1 0 ]
+{
+[v I2C_Init_Slave@add_slave add_slave `uc  1 a 1 wreg ]
+[v I2C_Init_Slave@add_slave add_slave `uc  1 a 1 wreg ]
+"85
+[v I2C_Init_Slave@add_slave add_slave `uc  1 a 1 0 ]
+"95
+} 0
+"48 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\main_slave.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"68
+} 0
+"135 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_slave.X\i2c.c
+[v _I2C_Write_Slave I2C_Write_Slave `(v  1 e 1 0 ]
+{
+[v I2C_Write_Slave@dato_i2c dato_i2c `uc  1 a 1 wreg ]
+[v I2C_Write_Slave@dato_i2c dato_i2c `uc  1 a 1 wreg ]
+"138
+[v I2C_Write_Slave@dato_i2c dato_i2c `uc  1 a 1 0 ]
+"143
+} 0
+"103
+[v _I2C_Write_Mode I2C_Write_Mode `(s  1 e 2 0 ]
+{
+"106
+} 0
+"123
+[v _I2C_Read_Slave I2C_Read_Slave `(uc  1 e 1 0 ]
+{
+"126
+[v I2C_Read_Slave@dato_i2c dato_i2c `uc  1 a 1 0 ]
+"133
+} 0
+"107
+[v _I2C_Read_Mode I2C_Read_Mode `(s  1 e 2 0 ]
+{
+"110
+} 0
+"97
+[v _I2C_Error_Read I2C_Error_Read `(s  1 e 2 0 ]
+{
+"101
+} 0
+"112
+[v _I2C_Error_Data I2C_Error_Data `(v  1 e 1 0 ]
+{
+"121
+} 0

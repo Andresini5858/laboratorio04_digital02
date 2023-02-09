@@ -1,8 +1,8 @@
 /*
- * File:   main_slave1.c
- * Author: Andres Lemus
+ * File:   main_slave.c
+ * Author: Andres
  *
- * Created on February 9, 2023, 1:00 AM
+ * Created on February 9, 2023, 3:18 PM
  */
 
 // CONFIG1
@@ -24,42 +24,80 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>
+#include "i2c.h"
 
-#define _XTAL_FREQ 8000000 //Frecuencia 4MHz
-//MASTER MASTER MASTER
+#define _XTAL_FREQ 8000000 //Frecuencia 8MHz
+//SLAVE SLAVE SLAVE
+
+unsigned char voltaje;
+unsigned char recibido;
 
 void setup(void);
-void setupI2C(void);
+void setupADC(void);
 
 void main(void) {
     setup();
-    setupI2C();
+    setupADC();
     while(1){
-        
+        if (ADCON0bits.GO == 0){
+            ADCON0bits.GO = 1;
+        }
+    }
+}
+
+void __interrupt() isr(void){ //Interrupciones
+    if (PIR1bits.ADIF == 1){
+        voltaje = ADRESH;
+        PIR1bits.ADIF = 0;
+    }
+    if (PIR1bits.SSPIF == 1){
+        if(I2C_Error_Read() != 0)
+        {
+            I2C_Error_Data();
+        }
+        if(I2C_Write_Mode() == 1)
+        {
+            recibido = I2C_Read_Slave();
+        }
+        if(I2C_Read_Mode() == 1)
+        {
+            I2C_Write_Slave(voltaje);
+        }
+        PIR1bits.SSPIF = 0;
     }
 }
 
 void setup(void){
-    ANSEL = 0;
+    ANSELbits.ANS0 = 1;
     ANSELH = 0;
     
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIR1bits.SSPIF = 0;
-    PIE1bits.SSPIE = 1;
+    PORTC = 0;
+    
+    PIR1bits.ADIF = 0;
+    PIE1bits.ADIE = 1;
     
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF0 = 1;
+    
     OSCCONbits.SCS = 1;
+    I2C_Init_Slave(0x50);
 }
 
-void setupI2C(void){
-    TRISCbits.TRISC4 = 1;
-    TRISCbits.TRISC3 = 1;
+void setupADC(void){
+    ADCON0bits.ADCS1 = 0; // Fosc/8        
+    ADCON0bits.ADCS0 = 1; //       
     
-    SSPSTAT = 0b10000000;
-    SSPCON = 0b00110110;
-    SSPCON2 = 0b00000001;
-    SSPADD = 0xA0;
+    ADCON1bits.VCFG1 = 0; // Referencia VSS (0 Volts)
+    ADCON1bits.VCFG0 = 0; // Referencia VDD (5 Volts)
+    
+    ADCON1bits.ADFM = 0;  // Justificado hacia izquierda
+    
+    ADCON0bits.CHS3 = 0; // Canal AN0
+    ADCON0bits.CHS2 = 0;
+    ADCON0bits.CHS1 = 0;
+    ADCON0bits.CHS0 = 0;        
+    
+    ADCON0bits.ADON = 1; // Habilitamos el ADC
+    __delay_us(100);     //delay de 100 us
 }
