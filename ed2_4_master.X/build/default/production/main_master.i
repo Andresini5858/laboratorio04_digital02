@@ -2846,7 +2846,6 @@ void main(void) {
             Lcd_Write_String("T");
         }
         else if (selector == 1){
-            Slave1();
             Lcd_Set_Cursor(2,7);
             sprintf(buffer, "%02u/%02u/20%02u ", dia, mes, ano);
             Lcd_Write_String(buffer);
@@ -2854,7 +2853,6 @@ void main(void) {
             Lcd_Write_String("D ");
         }
         else if (selector == 2){
-            Slave1();
             Lcd_Set_Cursor(2,7);
             sprintf(buffer, "%02u/%02u/20%02u ", dia, mes, ano);
             Lcd_Write_String(buffer);
@@ -2862,7 +2860,6 @@ void main(void) {
             Lcd_Write_String("M ");
         }
         else if (selector == 3){
-            Slave1();
             Lcd_Set_Cursor(2,7);
             sprintf(buffer, "%02u/%02u/20%02u ", dia, mes, ano);
             Lcd_Write_String(buffer);

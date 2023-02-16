@@ -56,37 +56,37 @@
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 "60 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
 [v _main main `(v  1 e 1 0 ]
-"116
+"113
 [v _isr isr `II(v  1 e 1 0 ]
-"250
+"247
 [v _setup setup `(v  1 e 1 0 ]
-"281
+"278
 [v _Read Read `(uc  1 e 1 0 ]
-"295
+"292
 [v _Read_Time Read_Time `(v  1 e 1 0 ]
-"301
+"298
 [v _Read_Fecha Read_Fecha `(v  1 e 1 0 ]
-"307
+"304
 [v _Set_sec Set_sec `(v  1 e 1 0 ]
-"323
+"320
 [v _Set_hour Set_hour `(v  1 e 1 0 ]
-"331
+"328
 [v _Set_day_week Set_day_week `(v  1 e 1 0 ]
-"339
+"336
 [v _Set_day Set_day `(v  1 e 1 0 ]
 [v i1_Set_day Set_day `(v  1 e 1 0 ]
-"347
+"344
 [v _Set_month Set_month `(v  1 e 1 0 ]
 [v i1_Set_month Set_month `(v  1 e 1 0 ]
-"355
+"352
 [v _Set_year Set_year `(v  1 e 1 0 ]
 [v i1_Set_year Set_year `(v  1 e 1 0 ]
-"363
+"360
 [v _Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
 [v i1_Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
-"379
+"376
 [v _Bcd_to_Dec Bcd_to_Dec `(uc  1 e 1 0 ]
-"385
+"382
 [v _Slave1 Slave1 `(v  1 e 1 0 ]
 "229 E:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -269,12 +269,12 @@
 "60
 [v _main main `(v  1 e 1 0 ]
 {
-"114
+"111
 } 0
-"250
+"247
 [v _setup setup `(v  1 e 1 0 ]
 {
-"279
+"276
 } 0
 "12 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\i2c.c
 [v _I2C_Init_Master I2C_Init_Master `(v  1 e 1 0 ]
@@ -285,10 +285,10 @@
 [v I2C_Init_Master@sp_i2c sp_i2c `uc  1 a 1 0 ]
 "25
 } 0
-"385 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
+"382 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
 [v _Slave1 Slave1 `(v  1 e 1 0 ]
 {
-"394
+"391
 } 0
 "505 E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -391,67 +391,67 @@
 [v Lcd_Set_Cursor@a a `uc  1 a 1 6 ]
 "63
 } 0
-"355 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
+"352 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
 [v _Set_year Set_year `(v  1 e 1 0 ]
 {
 [v Set_year@year year `uc  1 a 1 wreg ]
 [v Set_year@year year `uc  1 a 1 wreg ]
 [v Set_year@year year `uc  1 a 1 2 ]
-"361
+"358
 } 0
-"307
+"304
 [v _Set_sec Set_sec `(v  1 e 1 0 ]
 {
 [v Set_sec@sec sec `uc  1 a 1 wreg ]
 [v Set_sec@sec sec `uc  1 a 1 wreg ]
 [v Set_sec@sec sec `uc  1 a 1 2 ]
-"313
+"310
 } 0
-"347
+"344
 [v _Set_month Set_month `(v  1 e 1 0 ]
 {
 [v Set_month@month month `uc  1 a 1 wreg ]
 [v Set_month@month month `uc  1 a 1 wreg ]
 [v Set_month@month month `uc  1 a 1 2 ]
-"353
+"350
 } 0
-"323
+"320
 [v _Set_hour Set_hour `(v  1 e 1 0 ]
 {
 [v Set_hour@hour hour `uc  1 a 1 wreg ]
 [v Set_hour@hour hour `uc  1 a 1 wreg ]
 [v Set_hour@hour hour `uc  1 a 1 2 ]
-"329
+"326
 } 0
-"331
+"328
 [v _Set_day_week Set_day_week `(v  1 e 1 0 ]
 {
 [v Set_day_week@day_week day_week `uc  1 a 1 wreg ]
 [v Set_day_week@day_week day_week `uc  1 a 1 wreg ]
 [v Set_day_week@day_week day_week `uc  1 a 1 2 ]
-"337
+"334
 } 0
-"339
+"336
 [v _Set_day Set_day `(v  1 e 1 0 ]
 {
 [v Set_day@day day `uc  1 a 1 wreg ]
 [v Set_day@day day `uc  1 a 1 wreg ]
 [v Set_day@day day `uc  1 a 1 2 ]
-"345
+"342
 } 0
-"363
+"360
 [v _Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
 {
 [v Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
-"364
+"361
 [v Dec_to_Bcd@bcd_number bcd_number `uc  1 a 1 1 ]
-"363
+"360
 [v Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
-"365
+"362
 [v Dec_to_Bcd@dec_number dec_number `uc  1 a 1 0 ]
-"377
+"374
 } 0
-"295
+"292
 [v _Read_Time Read_Time `(v  1 e 1 0 ]
 {
 [v Read_Time@s s `*.4uc  1 a 1 wreg ]
@@ -459,9 +459,9 @@
 [v Read_Time@m m `*.4uc  1 p 1 8 ]
 [v Read_Time@h h `*.4uc  1 p 1 9 ]
 [v Read_Time@s s `*.4uc  1 a 1 10 ]
-"299
+"296
 } 0
-"301
+"298
 [v _Read_Fecha Read_Fecha `(v  1 e 1 0 ]
 {
 [v Read_Fecha@d d `*.4uc  1 a 1 wreg ]
@@ -469,18 +469,18 @@
 [v Read_Fecha@mo mo `*.4uc  1 p 1 8 ]
 [v Read_Fecha@y y `*.4uc  1 p 1 9 ]
 [v Read_Fecha@d d `*.4uc  1 a 1 10 ]
-"305
+"302
 } 0
-"281
+"278
 [v _Read Read `(uc  1 e 1 0 ]
 {
 [v Read@address address `uc  1 a 1 wreg ]
-"282
+"279
 [v Read@dato dato `uc  1 a 1 3 ]
-"281
+"278
 [v Read@address address `uc  1 a 1 wreg ]
 [v Read@address address `uc  1 a 1 2 ]
-"293
+"290
 } 0
 "64 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\i2c.c
 [v _I2C_Write I2C_Write `(s  1 e 2 0 ]
@@ -516,17 +516,17 @@
 {
 "62
 } 0
-"379 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
+"376 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
 [v _Bcd_to_Dec Bcd_to_Dec `(uc  1 e 1 0 ]
 {
 [v Bcd_to_Dec@bcd bcd `uc  1 a 1 wreg ]
-"380
+"377
 [v Bcd_to_Dec@dec dec `uc  1 a 1 6 ]
-"379
+"376
 [v Bcd_to_Dec@bcd bcd `uc  1 a 1 wreg ]
-"381
+"378
 [v Bcd_to_Dec@bcd bcd `uc  1 a 1 7 ]
-"383
+"380
 } 0
 "4 E:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
@@ -567,34 +567,34 @@
 [v Lcd_Port@a a `uc  1 a 1 0 ]
 "33
 } 0
-"116 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
+"113 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"248
+"245
 } 0
-"355
+"352
 [v i1_Set_year Set_year `(v  1 e 1 0 ]
 {
 [v i1Set_year@year year `uc  1 a 1 wreg ]
 [v i1Set_year@year year `uc  1 a 1 wreg ]
 [v i1Set_year@year year `uc  1 a 1 2 ]
-"361
+"358
 } 0
-"347
+"344
 [v i1_Set_month Set_month `(v  1 e 1 0 ]
 {
 [v i1Set_month@month month `uc  1 a 1 wreg ]
 [v i1Set_month@month month `uc  1 a 1 wreg ]
 [v i1Set_month@month month `uc  1 a 1 2 ]
-"353
+"350
 } 0
-"339
+"336
 [v i1_Set_day Set_day `(v  1 e 1 0 ]
 {
 [v i1Set_day@day day `uc  1 a 1 wreg ]
 [v i1Set_day@day day `uc  1 a 1 wreg ]
 [v i1Set_day@day day `uc  1 a 1 2 ]
-"345
+"342
 } 0
 "64 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\i2c.c
 [v i1_I2C_Write I2C_Write `(s  1 e 2 0 ]
@@ -615,15 +615,15 @@
 {
 "32
 } 0
-"363 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
+"360 C:\Users\lemus\Documents\GitHub\laboratorio04_digital02\ed2_4_master.X\main_master.c
 [v i1_Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
 {
 [v i1Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
-"364
+"361
 [v i1Dec_to_Bcd@bcd_number bcd_number `uc  1 a 1 1 ]
-"363
+"360
 [v i1Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
-"365
+"362
 [v i1Dec_to_Bcd@dec_number dec_number `uc  1 a 1 0 ]
-"377
+"374
 } 0
